@@ -11,10 +11,7 @@ class EmailAddressParser
   
   def parse
     emails_array = @emails.split(/[,\s]+/) 
-    if emails_array[0] == emails_array[1]
-      emails_array.pop
-    end
-    emails_array
+    emails_array.uniq
   end
   
 end
